@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+
+:root{
+
+  --ff-destaque:'Staatliches', cursive;
+  --ff-textos: 'Poppins', sans-serif;
+
+  --bg-page: #BFD7E4;
+  --bg-destaque:#293241;
+  --bg-formulario: #FFFFFF;
+  --bg-formulario-destaque:#F67669;
+  --fc-label:#4E4958;
+  --fc-leged:#253B51;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--bg-page);
+}
+body::before{
+  content: '';
+  width: 100%;
+  height: 465px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--bg-destaque);
+}
+.page{
+
+  width: 750px;
+  margin: 0 auto;
+}
+header{
+  margin-top: 107px;
+  text-align: center;
+}
+header h1 {
+
+  font-family: var(--ff-destaque);
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size:36px;
+  line-height: 45px;
+}
+
+header p{
+
+  font-family: var(--ff-textos);
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size:16px;
+  line-height: 24px;
+
+  margin-bottom: 20px;
+  
+}
+form{
+  margin: 0 auto;
+  margin-top: 32px;
+  min-height: 300px;
+  width: 750px;
+  background-color: var(--bg-formulario);
+  border-radius: 20px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  padding: 0 64px 64px 64px;
+
+}
+form::before{
+  content: '';
+  width: 100%;
+  height: 133px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: var(--bg-formulario-destaque);
+  border-radius: 20px 20px 0 0;
+ 
+}
+fieldset{
+  border-style: none;
+}
+fieldset legend {
+  text-align: center;
+  border-style: none;
+
+  position: relative;
+
+  z-index: 2;
+  margin: 0 auto;
+  padding: 50px;
+
+  font-family: var(--ff-destaque);
+  color: var(--bg-formulario);
+  font-size: 24px;
+  line-height: 34px;
+}
+.legendas2{
+  text-align: center;
+  font-family: var(--ff-destaque);
+  color:var(--bg-destaque);
+  font-size: 24px;
+  line-height: 34px;
+  border-bottom:  1px solid #E6E6F0;
+  width: 100%;
+  padding: 0 0 8px 0;
+}
+.fieldset-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#name1, #name2, #form-mentor{
+  display: flex;
+  flex-direction: column;
+}
+.coluna{
+  display: flex;
+  gap:30px;
+}
+.input-wrapper label, .checkbox-wrapper label {
+  font-family:var(--ff-textos);
+  color: var(--fc-label);
+  font-size: 14px;
+  line-height: 24px;
+  
+  margin-bottom: 8px;
+}
+.input-wrapper label span{
+  font-family: var(--ff-textos);
+  color: var(--fc-span);
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+.input-wrapper input, select, textarea{
+  
+  height: 56px;
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  
+  margin: 8px 0 16px 0;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 15px;
+}
+.coluna input, select{
+  width: 300px;
+}
+select option {
+
+  font-family:var(--ff-textos);
+  color: var(--fc-label);
+  font-size: 14px;
+  line-height: 24px;
+  
+
+}
+select{
+ font-size: 15px;
+ padding:15px;
+}
+textarea{
+  height: 165px;
+}
+.checkbox-wrapper label{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.checkbox-wrapper {
+  position: relative;
+}
+.checkbox-wrapper input{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+}
+.checkbox-wrapper label::before{
+  content: '';
+  height: 24px;
+  width: 24px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  
+  display: block;
+
+}
+.checkbox-wrapper input:checked + label::before{
+
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 2px top 50%;
+}
+.checkbox-wrapper input:focus + label::before{
+  outline: 2px solid black;
+}
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+.button{
+  height: 56px;
+  background: var(--bg-formulario-destaque);
+  border: 0px;
+  border-radius: 8px;
+  font-family:  var(--ff-textos);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.button:hover{
+  background: #b9594f;
+  cursor: pointer;
+}
+ 
