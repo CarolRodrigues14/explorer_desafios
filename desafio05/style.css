@@ -159,7 +159,5 @@ footer{
   cursor: pointer;
   
 }
-input:invalid{
-  border: 2px solid rgb(197, 15, 15);
-}
+
 
