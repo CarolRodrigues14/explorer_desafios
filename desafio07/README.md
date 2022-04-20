@@ -11,4 +11,5 @@ Stage 03 - Desafio 7:Criando Layout responsivo📅 20.04.2022
 - [x]  Variáveis;
 - [x]  Animações simples.
 
- 📌 Stacks: HTML | CSS
+ 📌 Stacks: HTML | CSS<br>
+<a href="https://carolrodrigues14.github.io/explorer_desafios/desafio07/">Acesse o exercicio aqui</a>
