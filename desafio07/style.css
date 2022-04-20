@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Staatliches&display=swap');
+
+:root{
+  --ff-destaque:'Staatliches', cursive;
+  --ff-textos:'Palanquin', sans-serif;
+
+  --bc-header:#8E9AAF;
+  --bc-faixadestaque:#CBC0D3;
+  --bc-page:#E5E5E5;
+  --bc-main:#EFF1FF;
+
+  --fc-destaque:#FFFFFF;
+  --fc-textos:#23053A;
+  --fc-produtos:#4A4E69;
+
+  font-size: 62.5%;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--bc-page);
+}
+.page{
+  margin: 0 auto;
+  max-width: 41.4rem;
+}
+header{
+  background-color: var(--bc-header);
+  height: 27.9rem;
+  position: relative;
+}
+header img, #logo{
+  margin: 3.2rem 12.3rem 4.0rem 12.3rem;
+
+}
+header::before{
+
+  content: '';
+  width:38.4rem;
+  height: 4.9rem;
+ 
+
+  position: absolute;
+  
+  bottom: 2.8rem;
+  z-index: 0;
+  background-color: var(--bc-faixadestaque);
+  width: 100%;
+ 
+}
+h1{
+  position: relative;
+  left: 25%;
+  bottom: 4%;
+
+  font-family:var(--ff-destaque);
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 4.0rem;
+  line-height: 3.4rem;
+  letter-spacing: 2px;
+  text-shadow: 0.05em 0.05em #00000040;
+
+  animation: logo 700ms ;
+}
+main{
+  
+  background-color:var(--bc-main);
+  padding: 1.4rem 3.2rem 6.0rem 3.2rem;
+}
+main p{
+  Font-size: 2.0rem;
+  Line-height: 2.2rem;
+  
+  text-align: center;
+  
+  font-family: var(--ff-textos);
+  color: var(--fc-textos);
+ 
+
+  margin-bottom: 6.5rem;
+}
+.card h2 {
+
+  Font-size: 2.0rem;
+  Line-height: 3.4rem;
+  font-family: var(--ff-destaque);
+  color: var(--fc-produtos);
+  position: absolute;
+  z-index: 1;
+  right: 10%;
+  top:5%;
+
+  background-color: var(--bc-main);
+  border-radius: 2.0rem;
+  padding: 0 2.0rem;
+  letter-spacing: 2px;
+
+  animation: nome 700ms ;
+}
+
+.card {
+  position: relative;
+}
+.card img{
+  margin-bottom: 3.0rem;
+  width: 100%;
+  height: auto;
+  animation: img 700ms;
+  
+  
+}
+@keyframes img {
+  0%{
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+@keyframes nome {
+  0%{
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+    
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes logo {
+  0%{
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+    
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
